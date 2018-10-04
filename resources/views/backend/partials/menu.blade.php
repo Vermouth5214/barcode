@@ -25,7 +25,9 @@
 			<li class="{{ ($segment == 'verifikasi-undian' ? 'active' : '') }}">
 				<a href="<?=url('backend/verifikasi-undian');?>"><i class="fa fa-ticket"></i> Verifikasi Undian</a>
             </li>
-			
+			<li class="{{ ($segment == 'laporan-undian' ? 'active' : '') }}">
+				<a href="<?=url('backend/laporan-undian');?>"><i class="fa fa-file"></i> Laporan Undian</a>
+            </li>
 		</ul>
 	</div>
 	<div class="menu_section">

@@ -45,7 +45,43 @@
                             </div>
                         </div>
                     {{ Form::close() }}
-                    
+                    <?php
+                        if (isset($_GET['NIK'])):
+                    ?>
+                        {{ Form::open(['id' => 'form-undian' ,'method' => 'POST','class' => 'form-horizontal']) }}
+                        <input type="hidden" name="id_undian" value=<?=$undian[0]->id;?>>
+                        <hr/>
+                        <h3>Hadiah : <b><i><?=$undian[0]->hadiah->nama;?></i></b></h3>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <h4>Data Peserta</h4><br/>
+                                NIK : <b><?=$undian[0]->peserta->NIK;?></b><br/>
+                                No Undangan : <b><?=$undian[0]->peserta->no_undangan;?></b><br/>
+                                Nama : <b><?=$undian[0]->peserta->nama;?></b><br/>
+                                Alamat : <b><?=$undian[0]->peserta->alamat;?></b><br/>
+                                Phone : <b><?=$undian[0]->peserta->phone;?></b><br/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <h4>Status</h4><br/>
+                                <div class="radio">
+                                    <label><input type="radio" name="status" value=1 checked>Diterima</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="status" value=2>Ditolak</label>
+                                </div>
+                                <div id="keterangan" class="hide">
+                                    Alasan Penolakan
+                                    <textarea class="form-control" name="keterangan" id="text-keterangan"></textarea>
+                                </div>
+                                <br/>
+                                <button type="submit" class="btn btn-block btn-info">Submit</button>
+                            </div>
+                        </div>
+                        {{ Form::close() }}
+                    <?php
+                        endif;
+                    ?>
 				</div>
 			</div>
 		</div>
@@ -59,5 +95,23 @@
 
 <!-- JAVASCRIPT -->
 @section('script')
-
+    <script>
+        $('input[type=radio][name=status]').change(function() {
+            if (this.value == 1) {
+                $('#keterangan').addClass('hide');
+                $("#text-keterangan").prop('required',false);
+            }
+            else if (this.value == 2) {
+                $('#keterangan').removeClass('hide');
+                $("#text-keterangan").prop('required',true);
+            }
+        });
+        
+        $('#form-undian').submit(function(){
+            if (confirm("Apakah anda yakin mau menginput data ini?")) {
+                return true;     
+    		}
+	    	return false;
+        });
+    </script>
 @endsection
