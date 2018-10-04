@@ -23,10 +23,16 @@ class KehadiranController extends Controller {
     {
 		$peserta = Peserta::where('NIK','=',$request->NIK)->where('active','=',1)->get();
 		if (count($peserta)){
-			$update = Peserta::find($peserta[0]->id);
-			$update->hadir = 1;
-			if ($update->save()){
-				return Redirect::to('/backend/input-hadir/')->with('success', "Data saved successfully")->with('mode', 'success')->with('data', $peserta);
+			//sudah cek hadir
+			if ($peserta[0]->hadir == 1){
+				return Redirect::to('/backend/input-hadir/')->with('success', "NIK sudah terdaftar")->with('mode', 'danger');
+			} else {
+				$update = Peserta::find($peserta[0]->id);
+				$update->hadir = 1;
+				$update->user_modified = Session::get('userinfo')['user_id'];
+				if ($update->save()){
+					return Redirect::to('/backend/input-hadir/')->with('success', "Data saved successfully")->with('mode', 'success')->with('data', $peserta);
+				}
 			}
 		} else {
 			return Redirect::to('/backend/input-hadir/')->with('success', "NIK tidak ditemukan")->with('mode', 'danger');

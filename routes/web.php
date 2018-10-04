@@ -107,4 +107,11 @@ Route::group(array('prefix' => 'backend','middleware'=> ['token_admin']), functi
 	
 	Route::get('/input-hadir','Backend\KehadiranController@index');
 	Route::post('/input-hadir','Backend\KehadiranController@store');
+
+	Route::get('/daftar-undian','Backend\UndianController@index');
+	Route::post('/daftar-undian','Backend\UndianController@store');
+	Route::post('/undian/stat','Backend\UndianController@ajaxStat');
+
+	Route::get('/verifikasi-undian','Backend\VerifikasiUndianController@index');
+
 });

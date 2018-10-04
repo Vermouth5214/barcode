@@ -7,6 +7,9 @@
 	<div class="menu_section">
         <h3>Undangan</h3>
 		<ul class="nav side-menu">
+			<li class="{{ ($segment == 'dashboard' ? 'active' : '') }}">
+				<a href="<?=url('backend/dashboard');?>"><i class="fa fa-dashboard"></i> Dashboard</a>
+			</li>
 			<li class="{{ ($segment == 'daftar-peserta' ? 'active' : '') }}">
 				<a href="<?=url('backend/daftar-peserta');?>"><i class="fa fa-user"></i> Daftar Peserta</a>
             </li>
@@ -16,15 +19,18 @@
 			<li class="{{ ($segment == 'input-hadir' ? 'active' : '') }}">
 				<a href="<?=url('backend/input-hadir');?>"><i class="fa fa-user-plus"></i> Input Kehadiran</a>
             </li>
-
+			<li class="{{ ($segment == 'daftar-undian' ? 'active' : '') }}">
+				<a href="<?=url('backend/daftar-undian');?>"><i class="fa fa-ticket"></i> Daftar Undian</a>
+			</li>
+			<li class="{{ ($segment == 'verifikasi-undian' ? 'active' : '') }}">
+				<a href="<?=url('backend/verifikasi-undian');?>"><i class="fa fa-ticket"></i> Verifikasi Undian</a>
+            </li>
+			
 		</ul>
 	</div>
 	<div class="menu_section">
         <h3>General</h3>
 		<ul class="nav side-menu">
-			<li class="{{ ($segment == 'dashboard' ? 'active' : '') }}">
-				<a href="<?=url('backend/dashboard');?>"><i class="fa fa-dashboard"></i> Dashboard</a>
-			</li>
 			<li class=" {{ ((($segment == 'setting') || ($segment == 'modules') || ($segment == 'access-control')) ? 'active' : '') }}">
 				<a><i class="fa fa-cog"></i> System Admin <span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu" style="{{ ((($segment == 'setting') || ($segment == 'modules') || ($segment == 'access-control')) ? 'display : block' : '') }}">

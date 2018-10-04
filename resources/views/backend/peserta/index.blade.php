@@ -83,7 +83,6 @@
 								<th>No Undangan</th>								
 								<th>Nama</th>
                                 <th>Phone</th>
-								<th>Email</th>
 								<th>Hadir</th>
 								<th>Actions</th>
 							</tr>
@@ -106,7 +105,7 @@
 		$('.dataTable').dataTable({
 			processing: true,
 			serverSide: true,
-            "order": [[ 1, "desc" ]],
+            "order": [[ 0, "desc" ]],
 			ajax: "<?=url('backend/daftar-peserta/datatable?status='.$status);?>",
 			columns: [
 				{data: 'id', name: 'id'},
@@ -114,7 +113,6 @@
 				{data: 'no_undangan', name: 'no_undangan'},				
 				{data: 'nama', name: 'nama'},
 				{data: 'phone', name: 'phone'},
-				{data: 'email', name: 'email'},
 				{data:  'hadir', render: function ( data, type, row ) {
 					var text = "";
 					var label = "";

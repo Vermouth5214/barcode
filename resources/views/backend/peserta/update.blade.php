@@ -12,14 +12,6 @@
 	}
 ?>
 
-<?php
-	$cover_1 = [];
-	if (isset($data)){
-		$cover_1 = $data[0];
-		$cover_1->field = 'photo';
-	}
-?>
-
 @if(Session::has('errors'))
 <?php 
 	$errors = Session::get('errors'); 
@@ -46,12 +38,8 @@
 		$NIK = old('NIK');
         $nama = old('nama');
 		$alamat = old('alamat');
-		$photo = old('photo', 0);
-		$gender = old('gender');
-		$tgl_lahir = date('d-m-Y');
         $no_undangan = old('no_undangan');
 		$phone = old('phone');
-		$email = old('email');		
 		$active = 1;
 		$method = "POST";
 		$mode = "Create";
@@ -60,12 +48,8 @@
 			$NIK = $data[0]->NIK;
 			$nama = $data[0]->nama;
 			$alamat = $data[0]->alamat;
-			$photo = $data[0]->photo;
-			$gender = $data[0]->gender;
-			$tgl_lahir = date('d-m-Y',strtotime($data[0]->tgl_lahir));
-			$no_undangan = $data[0]->no_undangan;
+			$no_undangan = $data[0]->no_undangan;			
             $phone = $data[0]->phone;
-			$email = $data[0]->email;
 			$active = $data[0]->active;
 			$method = "PUT";
 			$mode = "Edit";
@@ -122,51 +106,6 @@
 							<label class="control-label col-sm-3 col-xs-12">Nama</label>
 							<div class="col-sm-7 col-xs-12">
 								<input type="text" name="nama" class="form-control" value="<?=$nama;?>">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-sm-3 col-xs-12">Photo</label>
-							<div class="col-sm-6 col-xs-9">
-								<input type="hidden" name="photo" value=<?=$photo;?> id="id-cover-image_1">
-								@include('backend.elements.change_cover',array('cover' => $cover_1, 'id_count' => 1))	
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-sm-3 col-xs-12">Email <span class="required">*</span></label>
-							<div class="col-sm-3 col-xs-12">
-								<input type="email" id="email" name="email" required="required" class="form-control" value="<?=$email;?>">
-								<span class="error">
-									<?php
-										if (isset($errors)){
-											echo $errors->first('email');
-										}
-									?>
-								</span>
-							</div>
-						</div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Tanggal Lahir</label>
-                            <div class="col-sm-4">
-                                <div class='input-group date' id='myDatepicker'>
-                                    <input type='text' class="form-control" name="tgl_lahir" value="<?=$tgl_lahir;?>">
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-						<div class="form-group">
-							<label class="control-label col-sm-3 col-xs-12">Gender</label>
-							<div class="col-sm-5 col-xs-12">
-								{{
-								Form::select(
-									'gender',
-									['pria' => 'Pria', 'wanita' => 'Wanita'],
-									$gender,
-									array(
-										'class' => 'form-control',
-									))
-								}}								
 							</div>
 						</div>
 						<div class="form-group">

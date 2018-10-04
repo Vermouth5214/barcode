@@ -16,11 +16,11 @@ use Validator;
 
 class PesertaController extends Controller {
     public function index(Request $request) {
-		$status = 0;
+		$status = 2;
 		if (isset($_GET['status']) && $_GET['status']!=""){
 			$status = $_GET['status'];
 		}else{
-			$status = 0;
+			$status = 2;
 		}
 		view()->share('status',$status);
 		return view ('backend.peserta.index');
@@ -55,23 +55,16 @@ class PesertaController extends Controller {
 		
 		$cekNIK = Peserta::where('NIK', $request->NIK)->get()->count();
 		$cekNoUndangan = Peserta::where('no_undangan', $request->no_undangan)->get()->count();
-		$cekEmail = Peserta::where('email', $request->email)->get()->count();
 
 		if($cekNIK > 0){
 			$validator->getMessageBag()->add('NIK', '*) NIK sudah ada');
 		}else if ($cekNoUndangan >0){
 			$validator->getMessageBag()->add('NoUndangan', '*) No Undangan sudah ada');
-		}else if ($cekEmail >0){
-			$validator->getMessageBag()->add('Email', '*) Email sudah ada');
 		}else{
 			$peserta = new Peserta();
 			$peserta->NIK = $request->NIK;
 			$peserta->no_undangan = $request->no_undangan;
 			$peserta->nama = $request->nama;
-			$peserta->photo = $request->photo;
-			$peserta->email = $request->email;
-			$peserta->tgl_lahir = date('Y-m-d',strtotime($request->tgl_lahir));
-			$peserta->gender = $request->gender;
 			$peserta->alamat = $request->alamat;
             $peserta->phone = $request->phone;
 			$peserta->user_modified = Session::get('userinfo')['user_id'];
@@ -107,23 +100,16 @@ class PesertaController extends Controller {
 		
 		$cekNIK = Peserta::where('peserta.id','<>',$id)->where('NIK', $request->NIK)->get()->count();
 		$cekNoUndangan = Peserta::where('peserta.id','<>',$id)->where('no_undangan', $request->no_undangan)->get()->count();
-		$cekEmail = Peserta::where('peserta.id','<>',$id)->where('email', $request->email)->get()->count();
 
 		if($cekNIK > 0){
 			$validator->getMessageBag()->add('NIK', '*) NIK sudah ada');
 		}else if ($cekNoUndangan >0){
 			$validator->getMessageBag()->add('NoUndangan', '*) No Undangan sudah ada');
-		}else if ($cekEmail >0){
-			$validator->getMessageBag()->add('Email', '*) Email sudah ada');
 		}else{
 			$peserta = Peserta::find($id);
 			$peserta->NIK = $request->NIK;
 			$peserta->no_undangan = $request->no_undangan;
 			$peserta->nama = $request->nama;
-			$peserta->photo = $request->photo;
-			$peserta->email = $request->email;
-			$peserta->tgl_lahir = date('Y-m-d',strtotime($request->tgl_lahir));
-			$peserta->gender = $request->gender;
 			$peserta->alamat = $request->alamat;
             $peserta->phone = $request->phone;
 			$peserta->user_modified = Session::get('userinfo')['user_id'];

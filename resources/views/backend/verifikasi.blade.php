@@ -2,21 +2,21 @@
 	$breadcrumb = [];
 	$breadcrumb[0]['title'] = 'Dashboard';
 	$breadcrumb[0]['url'] = url('backend/dashboard');
-	$breadcrumb[1]['title'] = 'Kehadiran';
-	$breadcrumb[1]['url'] = url('backend/input-hadir');
+	$breadcrumb[1]['title'] = 'Verifikasi';
+	$breadcrumb[1]['url'] = url('backend/verifikasi-undian');
 ?>
 
 <!-- LAYOUT -->
 @extends('backend.layouts.main')
 
 <!-- TITLE -->
-@section('title', 'Input Kehadiran')
+@section('title', 'Verifikasi Undian')
 
 <!-- CONTENT -->
 @section('content')
 	<div class="page-title">
 		<div class="title_left" style="width : 100%">
-			<h3>Input Kehadiran</h3>
+			<h3>Verifikasi Undian</h3>
 		</div>
 	</div>
 	<div class="clearfix"></div>
@@ -25,13 +25,7 @@
 		<div class="col-md-12 col-sm-12 col-xs-12">
 			<div class="x_panel">
 				<div class="x_content">
-                    {{ Form::open(['method' => 'POST','class' => 'form-horizontal']) }}
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3>Daftar Hadir : <span class="text-danger"><?=number_format($jumlah_hadir, 0, ',','.');?> </span> / <span class="text-info"><?=number_format($jumlah_peserta,0,',','.');?></span></h3>
-                            </div>
-                        </div>
-                        <br/>
+                    {{ Form::open(['method' => 'GET','class' => 'form-horizontal']) }}
                         @if (Session::has('success'))
                             <div class="row">
                                 <div class="col-xs-12 col-md-12 alert alert-<?=Session::get('mode');?> alert-dismissible" role="alert">
