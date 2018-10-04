@@ -45,22 +45,7 @@
                             </div>
                         </div>
                     {{ Form::close() }}
-                    @if (Session::has('data'))
-                        <hr/>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <?php
-                                    $data = Session::get('data');
-                                ?>
-                                <h4>Data Peserta</h4>
-                                NIK : <b><?=$data[0]->NIK;?></b><br/>
-                                No Undangan : <b><?=$data[0]->no_undangan;?></b><br/>
-                                Nama : <b><?=$data[0]->nama;?></b><br/>
-                                Alamat : <b><?=$data[0]->alamat;?></b><br/>
-                                Phone : <b><?=$data[0]->phone;?></b><br/>
-                            </div>
-                        </div>
-                    @endif
+                    
 				</div>
 			</div>
 		</div>
