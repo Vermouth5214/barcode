@@ -117,4 +117,8 @@ Route::group(array('prefix' => 'backend','middleware'=> ['token_admin']), functi
 
 	Route::get('/laporan-undian','Backend\LaporanUndianController@index');
 	Route::get('/laporan-undian/datatable','Backend\LaporanUndianController@datatable');
+
+	Route::get('/verifikasi-undian-batal','Backend\VerifikasiUndianBatalController@index');
+	Route::post('/verifikasi-undian-batal','Backend\VerifikasiUndianBatalController@store');
+
 });

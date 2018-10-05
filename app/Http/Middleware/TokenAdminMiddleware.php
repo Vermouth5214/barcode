@@ -23,9 +23,9 @@ class TokenAdminMiddleware
         }else{
             $userinfo = Session::get('userinfo');
 			//Jika bukan admin
-        	if($userinfo['user_level_id'] == 3){
-                return redirect('/');
-            }
+        	// if($userinfo['user_level_id'] == 3){
+            //     return redirect('/');
+            // }
         }
         return $next($request);
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2018 at 03:01 AM
+-- Generation Time: Oct 05, 2018 at 02:30 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -43,21 +43,36 @@ CREATE TABLE `access_control` (
 --
 
 INSERT INTO `access_control` (`id`, `user_level_id`, `module_id`, `content`, `user_modified`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'a', 1, '2018-10-01 18:29:47', '2018-10-01 18:29:47'),
-(2, 1, 2, 'a', 1, '2018-10-01 18:29:47', '2018-10-01 18:29:47'),
-(3, 1, 3, 'a', 1, '2018-10-01 18:29:47', '2018-10-01 18:29:47'),
-(4, 2, 1, 'a', 1, '2018-10-01 18:29:53', '2018-10-01 18:29:53'),
-(5, 2, 2, 'a', 1, '2018-10-01 18:29:53', '2018-10-01 18:29:53'),
-(6, 2, 3, 'a', 1, '2018-10-01 18:29:53', '2018-10-01 18:29:53'),
-(7, 3, 1, 'v', 1, '2018-10-01 18:29:57', '2018-10-01 18:29:57'),
-(8, 3, 2, 'v', 1, '2018-10-01 18:29:57', '2018-10-01 18:29:57'),
-(9, 3, 3, 'v', 1, '2018-10-01 18:29:57', '2018-10-01 18:29:57'),
-(10, 1, 4, 'a', 1, '2018-10-02 02:59:54', '2018-10-02 02:59:54'),
-(11, 2, 4, 'a', 1, '2018-10-02 02:59:57', '2018-10-02 02:59:57'),
-(12, 3, 4, 'v', 1, '2018-10-02 03:00:00', '2018-10-02 03:00:00'),
-(13, 1, 5, 'a', 1, '2018-10-02 06:29:09', '2018-10-02 06:29:09'),
-(14, 2, 5, 'a', 1, '2018-10-02 06:29:13', '2018-10-02 06:29:13'),
-(15, 3, 5, 'v', 1, '2018-10-02 06:29:17', '2018-10-02 06:29:17');
+(1, 1, 1, 'a', 1, '2018-10-04 09:00:27', '2018-10-04 09:00:27'),
+(2, 1, 2, 'a', 1, '2018-10-04 09:00:27', '2018-10-04 09:00:27'),
+(3, 1, 3, 'a', 1, '2018-10-04 09:00:27', '2018-10-04 09:00:27'),
+(4, 1, 4, 'a', 1, '2018-10-04 09:00:27', '2018-10-04 09:00:27'),
+(5, 1, 5, 'a', 1, '2018-10-04 09:00:27', '2018-10-04 09:00:27'),
+(6, 2, 1, 'a', 1, '2018-10-04 09:00:35', '2018-10-04 09:00:35'),
+(7, 2, 2, 'a', 1, '2018-10-04 09:00:35', '2018-10-04 09:00:35'),
+(8, 2, 3, 'a', 1, '2018-10-04 09:00:35', '2018-10-04 09:00:35'),
+(9, 2, 4, 'a', 1, '2018-10-04 09:00:35', '2018-10-04 09:00:35'),
+(10, 2, 5, 'a', 1, '2018-10-04 09:00:35', '2018-10-04 09:00:35'),
+(11, 3, 1, 'v', 1, '2018-10-04 09:00:50', '2018-10-04 09:00:50'),
+(12, 3, 2, 'v', 1, '2018-10-04 09:00:50', '2018-10-04 09:00:50'),
+(13, 3, 3, 'v', 1, '2018-10-04 09:00:50', '2018-10-04 09:00:50'),
+(14, 3, 4, 'v', 1, '2018-10-04 09:00:50', '2018-10-04 09:00:50'),
+(15, 3, 5, 'v', 1, '2018-10-04 09:00:50', '2018-10-04 09:00:50'),
+(16, 4, 1, 'v', 1, '2018-10-04 09:00:56', '2018-10-04 09:00:56'),
+(17, 4, 2, 'v', 1, '2018-10-04 09:00:56', '2018-10-04 09:00:56'),
+(18, 4, 3, 'v', 1, '2018-10-04 09:00:56', '2018-10-04 09:00:56'),
+(19, 4, 4, 'v', 1, '2018-10-04 09:00:56', '2018-10-04 09:00:56'),
+(20, 4, 5, 'v', 1, '2018-10-04 09:00:56', '2018-10-04 09:00:56'),
+(21, 5, 1, 'v', 1, '2018-10-04 09:01:02', '2018-10-04 09:01:02'),
+(22, 5, 2, 'v', 1, '2018-10-04 09:01:02', '2018-10-04 09:01:02'),
+(23, 5, 3, 'v', 1, '2018-10-04 09:01:02', '2018-10-04 09:01:02'),
+(24, 5, 4, 'v', 1, '2018-10-04 09:01:02', '2018-10-04 09:01:02'),
+(25, 5, 5, 'v', 1, '2018-10-04 09:01:02', '2018-10-04 09:01:02'),
+(26, 6, 1, 'a', 1, '2018-10-04 09:01:11', '2018-10-04 09:01:11'),
+(27, 6, 2, 'a', 1, '2018-10-04 09:01:11', '2018-10-04 09:01:11'),
+(28, 6, 3, 'a', 1, '2018-10-04 09:01:11', '2018-10-04 09:01:11'),
+(29, 6, 4, 'a', 1, '2018-10-04 09:01:11', '2018-10-04 09:01:11'),
+(30, 6, 5, 'a', 1, '2018-10-04 09:01:11', '2018-10-04 09:01:11');
 
 -- --------------------------------------------------------
 
@@ -74,15 +89,6 @@ CREATE TABLE `hadiah` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `user_modified` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `hadiah`
---
-
-INSERT INTO `hadiah` (`id`, `nama`, `active`, `jumlah`, `created_at`, `updated_at`, `user_modified`) VALUES
-(1, 'Payung', 1, 5, '2018-10-02 07:07:04', '2018-10-02 07:10:28', 1),
-(2, 'Motor', 1, 3, '2018-10-02 07:10:37', '2018-10-02 07:10:37', 1),
-(3, 'Mobil', 1, 1, '2018-10-02 07:10:43', '2018-10-02 07:10:43', 1);
 
 -- --------------------------------------------------------
 
@@ -106,8 +112,7 @@ CREATE TABLE `media_library` (
 --
 
 INSERT INTO `media_library` (`id`, `name`, `type`, `url`, `size`, `user_created`, `created_at`, `updated_at`) VALUES
-(0, 'noprofileimage', 'png', 'img/noprofileimage.png', '1159', 1, '2017-05-29 19:56:03', '2017-05-29 19:56:03'),
-(1, 'logo-php', 'png', 'upload/img/logo-php.png', '17585', 1, '2018-10-02 06:14:36', '2018-10-02 06:14:36');
+(0, 'noprofileimage', 'png', 'img/noprofileimage.png', '1159', 1, '2017-05-29 19:56:03', '2017-05-29 19:56:03');
 
 -- --------------------------------------------------------
 
@@ -147,26 +152,14 @@ CREATE TABLE `peserta` (
   `NIK` varchar(45) DEFAULT NULL,
   `nama` varchar(200) DEFAULT NULL,
   `alamat` text,
-  `photo` int(11) DEFAULT NULL,
-  `gender` enum('pria','wanita') DEFAULT NULL,
-  `tgl_lahir` date DEFAULT NULL,
   `no_undangan` text,
   `active` int(1) NOT NULL DEFAULT '1',
   `phone` varchar(50) DEFAULT NULL,
-  `email` varchar(200) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `user_modified` int(11) DEFAULT NULL,
   `hadir` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `peserta`
---
-
-INSERT INTO `peserta` (`id`, `NIK`, `nama`, `alamat`, `photo`, `gender`, `tgl_lahir`, `no_undangan`, `active`, `phone`, `email`, `created_at`, `updated_at`, `user_modified`, `hadir`) VALUES
-(1, '100001', 'Donny Winarto', 'Jl Ngagel Madya VI / 21\r\nSurabaya', 0, 'pria', '1986-07-25', '000001', 1, '083837777297', 'oeidonny.winarto@gmail.com', '2018-10-02 04:36:41', '2018-10-02 09:22:40', 1, 1),
-(2, '100002', 'Donny Winarta', 'Jl Madura 11 A\r\nMalang', 1, 'pria', '1983-05-25', '000002', 1, '085806876397', 'oeidonny.winarto@yahoo.com', '2018-10-02 06:11:08', '2018-10-02 06:15:16', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -192,6 +185,23 @@ INSERT INTO `settings` (`id`, `name`, `value`, `user_modified`, `created_at`, `u
 (2, 'logo', 'img/logo.png', 1, '2017-06-13 00:27:16', '2018-10-02 08:51:47'),
 (3, 'email_admin', 'admin@admin.com', 1, '2017-06-13 00:27:16', '2018-06-03 05:58:52'),
 (4, 'web_description', 'Website Description', 1, '2017-07-23 23:56:28', '2018-06-03 05:57:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `undian`
+--
+
+CREATE TABLE `undian` (
+  `id` int(11) NOT NULL,
+  `id_hadiah` int(11) DEFAULT NULL,
+  `id_peserta` int(11) DEFAULT NULL,
+  `status` int(1) DEFAULT NULL,
+  `keterangan` text,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `user_modified` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -224,8 +234,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_level_id`, `firstname`, `lastname`, `avatar_id`, `email`, `address`, `phone`, `gender`, `birthdate`, `username`, `password`, `active`, `user_modified`, `last_activity`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Super', 'Admin', 0, 'superadmin@admin.com', 'Jl Madura xxxxxxx', '08383xxxxxxx', 'male', '1986-07-25', 'superadmin', '$2y$10$TkX/dDYrtvIEXidPOag5T.V8qbyluUHJg5ssBjKe6WlVqpItuN8uy', 1, 1, '2018-10-02 01:41:32', '2017-03-13 20:51:35', '2018-10-02 01:41:32'),
-(2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-02 02:01:12', '2017-04-19 14:29:01', '2018-10-02 01:40:04');
+(1, 1, 'Super', 'Admin', 0, 'superadmin@admin.com', 'Jl Madura xxxxxxx', '08383xxxxxxx', 'male', '1986-07-25', 'superadmin', '$2y$10$TkX/dDYrtvIEXidPOag5T.V8qbyluUHJg5ssBjKe6WlVqpItuN8uy', 1, 1, '2018-10-04 09:00:09', '2017-03-13 20:51:35', '2018-10-04 09:00:09'),
+(2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-04 09:19:46', '2017-04-19 14:29:01', '2018-10-04 09:19:46');
 
 -- --------------------------------------------------------
 
@@ -249,7 +259,10 @@ CREATE TABLE `user_levels` (
 INSERT INTO `user_levels` (`id`, `name`, `active`, `user_modified`, `created_at`, `updated_at`) VALUES
 (1, 'Super Admin', 1, 1, '2017-06-28 06:18:17', '2017-06-28 06:18:17'),
 (2, 'Admin', 1, 1, '2018-06-02 15:59:51', '2018-06-02 15:59:51'),
-(3, 'User', 1, 1, '2018-06-03 04:19:49', '2018-06-03 04:19:49');
+(3, 'Usher', 1, 1, '2018-10-04 08:38:25', '2018-10-04 08:38:25'),
+(4, 'Pengundi', 1, 1, '2018-10-04 08:38:45', '2018-10-04 08:38:45'),
+(5, 'Verifikator', 1, 1, '2018-10-04 08:38:51', '2018-10-04 08:38:51'),
+(6, 'Ketua Panitia', 1, 1, '2018-10-04 08:40:31', '2018-10-04 08:40:31');
 
 --
 -- Indexes for dumped tables
@@ -292,6 +305,12 @@ ALTER TABLE `settings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `undian`
+--
+ALTER TABLE `undian`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -311,19 +330,19 @@ ALTER TABLE `user_levels`
 -- AUTO_INCREMENT for table `access_control`
 --
 ALTER TABLE `access_control`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `hadiah`
 --
 ALTER TABLE `hadiah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `media_library`
 --
 ALTER TABLE `media_library`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `modules`
@@ -335,13 +354,19 @@ ALTER TABLE `modules`
 -- AUTO_INCREMENT for table `peserta`
 --
 ALTER TABLE `peserta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `undian`
+--
+ALTER TABLE `undian`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -353,7 +378,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_levels`
 --
 ALTER TABLE `user_levels`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
