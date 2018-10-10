@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2018 at 05:58 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Generation Time: Oct 10, 2018 at 04:23 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.1.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -175,7 +175,7 @@ CREATE TABLE `peserta` (
 
 INSERT INTO `peserta` (`id`, `NIK`, `nama`, `alamat`, `no_undangan`, `active`, `phone`, `created_at`, `updated_at`, `user_modified`, `hadir`) VALUES
 (1, '01100002', 'AAA', 'AAA', '01100002', 1, '08580687639', '2018-10-05 01:41:56', '2018-10-05 01:51:19', 2, 1),
-(2, '0110004', 'BBB', 'BBB', '0110004', 1, '08383777729', '2018-10-05 01:42:16', '2018-10-05 01:42:16', 2, 0),
+(2, '01100004', 'BBB', 'BBB', '01100004', 1, '08383777729', '2018-10-05 01:42:16', '2018-10-10 01:01:37', 3, 0),
 (3, '01200024', 'CCC', 'CCC', '01200024', 1, '08383777729', '2018-10-05 01:43:39', '2018-10-05 01:49:15', 2, 1),
 (4, '01200040', 'DDD', 'DDD', '01200040', 1, '08383777729', '2018-10-05 01:43:56', '2018-10-05 01:43:56', 2, 0),
 (5, '01202001', 'EEE', 'EEE', '01202001', 1, '08383777729', '2018-10-05 01:44:17', '2018-10-05 01:51:53', 2, 1),
@@ -184,7 +184,7 @@ INSERT INTO `peserta` (`id`, `NIK`, `nama`, `alamat`, `no_undangan`, `active`, `
 (8, '01204019', 'HHH', 'HHH', '01204019', 1, '08383777729', '2018-10-05 01:45:11', '2018-10-05 01:45:11', 2, 0),
 (9, '01206001', 'JJJ', 'JJJ', '01206001', 1, '08383777729', '2018-10-05 01:45:26', '2018-10-05 01:45:26', 2, 0),
 (10, '01206006', 'KKK', 'KKK', '01206006', 1, '08383777729', '2018-10-05 01:45:42', '2018-10-05 01:52:01', 2, 1),
-(11, '01207001', 'LLL', 'LLL', '01207001', 1, '08383777729', '2018-10-05 01:45:55', '2018-10-05 01:45:55', 2, 0),
+(11, '01207001', 'LLL', 'LLL', '01207001', 1, '08383777729', '2018-10-05 01:45:55', '2018-10-10 00:53:18', 2, 1),
 (12, '01207002', 'MMM', 'MMM', '01207002', 1, '08383777729', '2018-10-05 01:46:13', '2018-10-05 01:50:16', 2, 1),
 (13, '01207007', 'NNN', 'NNN', '01207007', 1, '08383777729', '2018-10-05 01:46:32', '2018-10-05 01:46:32', 2, 0),
 (14, '01207008', 'OOO', 'OOO', '01207008', 1, '08383777729', '2018-10-05 01:46:48', '2018-10-05 01:46:48', 2, 0),
@@ -243,7 +243,8 @@ CREATE TABLE `undian` (
 --
 
 INSERT INTO `undian` (`id`, `id_hadiah`, `id_peserta`, `status`, `keterangan`, `created_at`, `updated_at`, `user_modified`) VALUES
-(1, 1, 21, 0, NULL, '2018-10-09 03:57:10', '2018-10-09 03:57:10', 2);
+(1, 1, 21, 0, NULL, '2018-10-09 03:57:10', '2018-10-09 03:57:10', 2),
+(2, 1, 1, 0, NULL, '2018-10-10 01:04:37', '2018-10-10 01:04:37', 4);
 
 -- --------------------------------------------------------
 
@@ -277,7 +278,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `user_level_id`, `firstname`, `lastname`, `avatar_id`, `email`, `address`, `phone`, `gender`, `birthdate`, `username`, `password`, `active`, `user_modified`, `last_activity`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Super', 'Admin', 0, 'superadmin@admin.com', 'Jl Madura xxxxxxx', '08383xxxxxxx', 'male', '1986-07-25', 'superadmin', '$2y$10$TkX/dDYrtvIEXidPOag5T.V8qbyluUHJg5ssBjKe6WlVqpItuN8uy', 1, 1, '2018-10-04 09:00:09', '2017-03-13 20:51:35', '2018-10-04 09:00:09'),
-(2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-09 03:55:19', '2017-04-19 14:29:01', '2018-10-09 03:55:19');
+(2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-10 02:22:47', '2017-04-19 14:29:01', '2018-10-10 02:22:47'),
+(3, 3, '-', '-', 0, 'usher@test1', NULL, NULL, 'male', '2018-10-09', 'usher1', '$2y$10$o5rc7dqjjm5b6fk4Ig8oveOQguM801jRDFjN6xAjNrMQHQWX1MaQ6', 1, 2, '2018-10-10 00:59:58', '2018-10-09 04:09:31', '2018-10-10 00:59:58'),
+(4, 4, '-', '-', 0, 'pengundi1@test.com', NULL, NULL, 'male', '2018-10-09', 'pengundi1', '$2y$10$3.oIgpTqOGaBOQ2X5X1IxejMsqojve09EeFhUqTN/HDNPdTD1C8Ba', 1, 2, '2018-10-10 01:04:03', '2018-10-09 04:10:05', '2018-10-10 01:04:03'),
+(5, 5, '-', '-', 0, 'verifikator1@test.com', NULL, NULL, 'male', '2018-10-09', 'verifikator1', '$2y$10$TOY6RMFmJD/tS103FwinuuqYX/DJ.KgNswJdFvvgSt60XXLIT5cEq', 1, 2, '2018-10-09 04:12:32', '2018-10-09 04:11:15', '2018-10-09 04:12:32'),
+(6, 6, '-', '-', 0, 'ketua@test.com', NULL, NULL, 'male', '2018-10-09', 'ketua', '$2y$10$q.ii3mXceDda35wEdGSsM.twyZhU1UlPm6Kt0iTEH/cMkZUnlrB56', 1, 2, '2018-10-09 04:12:08', '2018-10-09 04:11:45', '2018-10-09 04:12:08');
 
 -- --------------------------------------------------------
 
@@ -408,13 +413,13 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `undian`
 --
 ALTER TABLE `undian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_levels`
