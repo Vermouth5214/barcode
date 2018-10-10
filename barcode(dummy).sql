@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2018 at 04:23 AM
+-- Generation Time: Oct 10, 2018 at 04:31 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -216,10 +216,10 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `value`, `user_modified`, `created_at`, `updated_at`) VALUES
-(1, 'web_title', 'ODWin Panel', 1, '2017-06-13 00:27:16', '2018-06-03 05:57:27'),
+(1, 'web_title', 'AVIAN', 1, '2017-06-13 00:27:16', '2018-10-10 02:30:02'),
 (2, 'logo', 'img/logo.png', 1, '2017-06-13 00:27:16', '2018-10-02 08:51:47'),
 (3, 'email_admin', 'admin@admin.com', 1, '2017-06-13 00:27:16', '2018-06-03 05:58:52'),
-(4, 'web_description', 'Website Description', 1, '2017-07-23 23:56:28', '2018-06-03 05:57:20');
+(4, 'web_description', '', 1, '2017-07-23 23:56:28', '2018-10-10 02:30:02');
 
 -- --------------------------------------------------------
 
@@ -277,7 +277,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_level_id`, `firstname`, `lastname`, `avatar_id`, `email`, `address`, `phone`, `gender`, `birthdate`, `username`, `password`, `active`, `user_modified`, `last_activity`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Super', 'Admin', 0, 'superadmin@admin.com', 'Jl Madura xxxxxxx', '08383xxxxxxx', 'male', '1986-07-25', 'superadmin', '$2y$10$TkX/dDYrtvIEXidPOag5T.V8qbyluUHJg5ssBjKe6WlVqpItuN8uy', 1, 1, '2018-10-04 09:00:09', '2017-03-13 20:51:35', '2018-10-04 09:00:09'),
+(1, 1, 'Super', 'Admin', 0, 'superadmin@admin.com', 'Jl Madura xxxxxxx', '08383xxxxxxx', 'male', '1986-07-25', 'superadmin', '$2y$10$TkX/dDYrtvIEXidPOag5T.V8qbyluUHJg5ssBjKe6WlVqpItuN8uy', 1, 1, '2018-10-10 02:29:08', '2017-03-13 20:51:35', '2018-10-10 02:29:08'),
 (2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-10 02:22:47', '2017-04-19 14:29:01', '2018-10-10 02:22:47'),
 (3, 3, '-', '-', 0, 'usher@test1', NULL, NULL, 'male', '2018-10-09', 'usher1', '$2y$10$o5rc7dqjjm5b6fk4Ig8oveOQguM801jRDFjN6xAjNrMQHQWX1MaQ6', 1, 2, '2018-10-10 00:59:58', '2018-10-09 04:09:31', '2018-10-10 00:59:58'),
 (4, 4, '-', '-', 0, 'pengundi1@test.com', NULL, NULL, 'male', '2018-10-09', 'pengundi1', '$2y$10$3.oIgpTqOGaBOQ2X5X1IxejMsqojve09EeFhUqTN/HDNPdTD1C8Ba', 1, 2, '2018-10-10 01:04:03', '2018-10-09 04:10:05', '2018-10-10 01:04:03'),

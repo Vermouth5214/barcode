@@ -181,10 +181,10 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `value`, `user_modified`, `created_at`, `updated_at`) VALUES
-(1, 'web_title', 'ODWin Panel', 1, '2017-06-13 00:27:16', '2018-06-03 05:57:27'),
+(1, 'web_title', 'AVIAN', 1, '2017-06-13 00:27:16', '2018-06-03 05:57:27'),
 (2, 'logo', 'img/logo.png', 1, '2017-06-13 00:27:16', '2018-10-02 08:51:47'),
 (3, 'email_admin', 'admin@admin.com', 1, '2017-06-13 00:27:16', '2018-06-03 05:58:52'),
-(4, 'web_description', 'Website Description', 1, '2017-07-23 23:56:28', '2018-06-03 05:57:20');
+(4, 'web_description', '', 1, '2017-07-23 23:56:28', '2018-06-03 05:57:20');
 
 -- --------------------------------------------------------
 
