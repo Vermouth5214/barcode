@@ -41,12 +41,12 @@ class LaporanUndianController extends Controller {
 		}
 		if ($id_hadiah == 0){
 			if ($status == 3){
-				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.no_undangan','peserta.phone'])
+				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.bagian'])
 							->leftJoin('hadiah', 'undian.id_hadiah','=','hadiah.id')
 							->leftJoin('peserta', 'undian.id_peserta','=','peserta.id')
 							->orderBy('undian.id','asc');
 			} else {
-				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.no_undangan','peserta.phone'])
+				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.bagian'])
 							->leftJoin('hadiah', 'undian.id_hadiah','=','hadiah.id')
 							->leftJoin('peserta', 'undian.id_peserta','=','peserta.id')
 							->where('status','=',$status)
@@ -54,13 +54,13 @@ class LaporanUndianController extends Controller {
 			}
 		} else {
 			if ($status == 3){
-				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.no_undangan','peserta.phone'])
+				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.bagian'])
 							->leftJoin('hadiah', 'undian.id_hadiah','=','hadiah.id')
 							->leftJoin('peserta', 'undian.id_peserta','=','peserta.id')
 							->where('id_hadiah','=',$id_hadiah)
 							->orderBy('undian.id','asc');
 			} else {
-				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.no_undangan','peserta.phone'])
+				$undian = Undian::select(['undian.*','hadiah.nama','peserta.NIK','peserta.nama as NamaPeserta','peserta.bagian'])
 							->leftJoin('hadiah', 'undian.id_hadiah','=','hadiah.id')
 							->leftJoin('peserta', 'undian.id_peserta','=','peserta.id')
 							->where('id_hadiah','=',$id_hadiah)

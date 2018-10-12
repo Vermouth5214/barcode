@@ -103,9 +103,8 @@
 							<tr>
 								<th>ID</th>
 								<th>NIK</th>
-								<th>No Undangan</th>								
 								<th>Nama</th>
-								<th>Phone</th>
+								<th>Bagian</th>
                                 <th>Hadiah</th>
 								<th>Status</th>
 								<th>Keterangan</th>
@@ -134,9 +133,8 @@
 			columns: [
 				{data: 'id', name: 'undian.id'},
 				{data: 'NIK', name: 'peserta.NIK'},
-				{data: 'no_undangan', name: 'peserta.no_undangan'},
 				{data: 'NamaPeserta', name: 'peserta.nama'},
-				{data: 'phone', name: 'peserta.phone'},
+				{data: 'bagian', name: 'peserta.bagian'},
 				{data: 'nama', name: 'hadiah.nama'},
 				{data:  'status', render: function ( data, type, row ) {
 					var text = "";

@@ -103,8 +103,7 @@
                                     NIK : <b><?=$data[0]->NIK;?></b><br/>
                                     No Undangan : <b><?=$data[0]->no_undangan;?></b><br/>
                                     Nama : <b><?=$data[0]->nama;?></b><br/>
-                                    Alamat : <b><?=$data[0]->alamat;?></b><br/>
-                                    Phone : <b><?=$data[0]->phone;?></b><br/>
+                                    Bagian : <b><?=$data[0]->bagian;?></b><br/>
                                 </div>
                             </div>
                         @endif

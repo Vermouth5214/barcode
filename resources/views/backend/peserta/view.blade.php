@@ -21,13 +21,9 @@
 				<span class="form-control"><?=$data->nama;?></span>
 			</div>
 			<div class="form-group col-xs-12">
-				<label class="control-label">Alamat:</label>
-				<span class="form-control"><?=$data->alamat;?></span>
+				<label class="control-label">Bagian :</label>
+				<span class="form-control"><?=$data->bagian;?></span>
 			</div>
-			<div class="form-group col-xs-12">
-				<label class="control-label">Phone:</label>
-				<span class="form-control"><?=$data->phone;?></span>
-            </div>
 			<div class="form-group col-xs-12">
 				<label class="control-label">Date Created :</label>
 				<span class="form-control"><?=date('d M Y H:i:s', strtotime($data->created_at));?></span>

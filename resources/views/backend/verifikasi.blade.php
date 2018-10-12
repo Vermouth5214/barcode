@@ -59,8 +59,7 @@
                                 NIK : <b><?=$undian[0]->peserta->NIK;?></b><br/>
                                 No Undangan : <b><?=$undian[0]->peserta->no_undangan;?></b><br/>
                                 Nama : <b><?=$undian[0]->peserta->nama;?></b><br/>
-                                Alamat : <b><?=$undian[0]->peserta->alamat;?></b><br/>
-                                Phone : <b><?=$undian[0]->peserta->phone;?></b><br/>
+                                Bagian : <b><?=$undian[0]->peserta->bagian;?></b><br/>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <h4>Status</h4><br/>

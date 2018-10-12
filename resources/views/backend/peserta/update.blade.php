@@ -37,9 +37,8 @@
 	<?php
 		$NIK = old('NIK');
         $nama = old('nama');
-		$alamat = old('alamat');
+		$bagian = old('alamat');
         $no_undangan = old('no_undangan');
-		$phone = old('phone');
 		$active = 1;
 		$method = "POST";
 		$mode = "Create";
@@ -47,9 +46,8 @@
 		if (isset($data)){
 			$NIK = $data[0]->NIK;
 			$nama = $data[0]->nama;
-			$alamat = $data[0]->alamat;
+			$bagian = $data[0]->bagian;
 			$no_undangan = $data[0]->no_undangan;			
-            $phone = $data[0]->phone;
 			$active = $data[0]->active;
 			$method = "PUT";
 			$mode = "Edit";
@@ -109,15 +107,9 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-sm-3 col-xs-12">Alamat</label>
-							<div class="col-sm-8 col-xs-12">
-								<textarea name="alamat" class="form-control" rows=8><?=$alamat;?></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-sm-3 col-xs-12">Phone</label>
+							<label class="control-label col-sm-3 col-xs-12">Bagian</label>
 							<div class="col-sm-3 col-xs-12">
-								<input type="text" name="phone" class="form-control" value="<?=$phone;?>">
+								<input type="text" name="bagian" class="form-control" value="<?=$bagian;?>">
 							</div>
                         </div>
 						<div class="form-group">

@@ -80,9 +80,8 @@
 							<tr>
 								<th>ID</th>
 								<th>NIK</th>
-								<th>No Undangan</th>								
 								<th>Nama</th>
-                                <th>Phone</th>
+                                <th>Bagian</th>
 								<th>Hadir</th>
 								<th>Actions</th>
 							</tr>
@@ -110,9 +109,8 @@
 			columns: [
 				{data: 'id', name: 'id'},
 				{data: 'NIK', name: 'NIK'},
-				{data: 'no_undangan', name: 'no_undangan'},				
 				{data: 'nama', name: 'nama'},
-				{data: 'phone', name: 'phone'},
+				{data: 'bagian', name: 'bagian'},
 				{data:  'hadir', render: function ( data, type, row ) {
 					var text = "";
 					var label = "";
