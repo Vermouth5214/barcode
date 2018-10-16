@@ -46,6 +46,7 @@
     </div>
     <script src="<?=url('js/bootstrap.min.js');?>"></script>
     <script>
+        $('#content').attr('tabindex','0').focus();
         setInterval(function() {
             $.ajax({
                 url: "{{ url('/undian/auto') }}",
@@ -54,12 +55,13 @@
                 success: function(result){
                     $("#title").html(result.jenis_hadiah);
                     $("#content").html(result.data_undian);
+                    $('#content').attr('tabindex','0').focus();
                 },
                 error : function(result){
                     console.log(result);
                 }
             });            
-        }, 2000); //10 seconds
+        }, 2500); //10 seconds
     </script>
 </body>
 </html>
