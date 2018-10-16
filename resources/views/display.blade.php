@@ -27,7 +27,7 @@
     </div>
     <br/>
     <?php
-        $i = 1;
+        $i = $jumlah;
     ?>
     <div class="container" id="content" style="height : 640px; overflow-y : auto">
         @foreach ($data_undian as $item)
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <?php
-                $i++;
+                $i--;
             ?>
         @endforeach
     </div>
