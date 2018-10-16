@@ -15,6 +15,9 @@ Route::get('/', function () {
 	return redirect('backend/');
 });
 
+Route::get('/display','DisplayController@index');
+Route::get('undian/auto', 'DisplayController@auto');
+
 Route::match(array('GET','POST'),'/backend/login','Backend\LoginController@index');
 
 /* SUPER ADMIN */
