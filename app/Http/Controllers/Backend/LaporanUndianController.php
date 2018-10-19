@@ -14,7 +14,7 @@ use Datatables;
 
 class LaporanUndianController extends Controller {
 	public function index(Request $request) {
-		$hadiah = Hadiah::where('active','=',1)->orderBy('id','asc')->pluck('nama','id')->prepend('Semua',0);
+		$hadiah = Hadiah::where('active','=',1)->orderBy('id','desc')->pluck('nama','id')->prepend('Semua',0);
 		$id_hadiah = 0;
 		if (isset($_GET['id_hadiah'])){
 			$id_hadiah = $_GET['id_hadiah'];

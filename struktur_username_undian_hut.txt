@@ -1,0 +1,36 @@
+======================================
+registrator1
+registrator2
+registrator3
+registrator4
+registrator5
+registrator6
+registrator7
+registrator8
+registrator9
+registrator10
+- input kehadiran
+======================================
+pengundi1
+pengundi2
+pengundi3
+pengundi4
+- daftar undian
+- verikasi undian
+- verifikasi batal otomatis
+- laporan undian
+======================================
+verifikator1
+verifikator2
+verifikator3
+verifikator4
+verifikator5
+verifikator6
+- verifikasi undian
+- verifikasi batal otomatis
+- laporan undian
+======================================
+ketua 
+- daftar peserta
+- daftar hadiah
+- laporan undian

@@ -47,7 +47,7 @@
 				endif;
 			?>
 			<?php
-				if (($userinfo['user_level_id'] == 1) || ($userinfo['user_level_id'] == 2) || ($userinfo['user_level_id'] == 5)):
+				if (($userinfo['user_level_id'] == 1) || ($userinfo['user_level_id'] == 2) || ($userinfo['user_level_id'] == 4) || ($userinfo['user_level_id'] == 5)):
 			?>
 			<li class="{{ ($segment == 'verifikasi-undian' ? 'active' : '') }}">
 				<a href="<?=url('backend/verifikasi-undian');?>"><i class="fa fa-ticket"></i> Verifikasi Undian</a>

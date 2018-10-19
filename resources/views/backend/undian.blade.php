@@ -100,10 +100,9 @@
                                         $data = Session::get('data');
                                     ?>
                                     <h4>Data Peserta</h4>
-                                    NIK : <b><?=$data[0]->NIK;?></b><br/>
-                                    No Undangan : <b><?=$data[0]->no_undangan;?></b><br/>
-                                    Nama : <b><?=$data[0]->nama;?></b><br/>
-                                    Bagian : <b><?=$data[0]->bagian;?></b><br/>
+                                    <h4>NIK : <b><?=$data[0]->NIK;?></b></h4>
+                                    <h4>Nama : <b><?=$data[0]->nama;?></b></h4>
+                                    <h4>Bagian : <b><?=$data[0]->bagian;?></b></h4>
                                 </div>
                             </div>
                         @endif
@@ -127,23 +126,23 @@
         if ($id_hadiah !=0):
     ?>
     <script>
-        setInterval(function() {
-            $.ajax({
-                url: "{{ url('/backend/undian/stat') }}",
-                method: 'post',
-                dataType:"json",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    "id_hadiah": $('#id_hadiah').val()
-                },
-                success: function(result){
-                    $("#jumlah_hadiah").html(result.jumlah_hadiah);
-                    $("#jumlah_undian").html(result.jumlah_undian);
-                    $("#jumlah_ditrima").html(result.jumlah_ditrima);
-                    $("#jumlah_ditolak").html(result.jumlah_ditolak);
-                }
-            });            
-        }, 10000); //10 seconds
+        // setInterval(function() {
+        //     $.ajax({
+        //         url: "{{ url('/backend/undian/stat') }}",
+        //         method: 'post',
+        //         dataType:"json",
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             "id_hadiah": $('#id_hadiah').val()
+        //         },
+        //         success: function(result){
+        //             $("#jumlah_hadiah").html(result.jumlah_hadiah);
+        //             $("#jumlah_undian").html(result.jumlah_undian);
+        //             $("#jumlah_ditrima").html(result.jumlah_ditrima);
+        //             $("#jumlah_ditolak").html(result.jumlah_ditolak);
+        //         }
+        //     });            
+        // }, 10000); //10 seconds
     </script>
     <?php
         endif;

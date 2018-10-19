@@ -14,7 +14,7 @@ use View;
 
 class UndianController extends Controller {
 	public function index(Request $request) {
-		$hadiah = Hadiah::where('active','=',1)->orderBy('id','asc')->pluck('nama','id');
+		$hadiah = Hadiah::where('active','=',1)->orderBy('id','desc')->pluck('nama','id');
 		$id_hadiah = 0;
 		if (isset($_GET['id_hadiah'])){
 			$id_hadiah = $_GET['id_hadiah'];

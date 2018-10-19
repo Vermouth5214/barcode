@@ -39,6 +39,19 @@
                                 </div>
                             </div>
                         @endif
+                        @if (Session::has('data'))
+                            <hr/>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <?php
+                                        $data = Session::get('data');
+                                    ?>
+                                    <h4>NIK : <b><?=$data[0]->NIK;?></b></h4>
+                                    <h4>Nama : <b><?=$data[0]->nama;?></b></h4>
+                                    <h4>Bagian : <b><?=$data[0]->bagian;?></b></h4>
+                                </div>
+                            </div>
+                        @endif
                         <div class="row">
                             <div class="col-xs-12 col-sm-1" style="margin-top:7px;">
                                 NIK <span class="required">*</span>
@@ -51,21 +64,6 @@
                             </div>
                         </div>
                     {{ Form::close() }}
-                    @if (Session::has('data'))
-                        <hr/>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <?php
-                                    $data = Session::get('data');
-                                ?>
-                                <h4>Data Peserta</h4>
-                                NIK : <b><?=$data[0]->NIK;?></b><br/>
-                                No Undangan : <b><?=$data[0]->no_undangan;?></b><br/>
-                                Nama : <b><?=$data[0]->nama;?></b><br/>
-                                Bagian : <b><?=$data[0]->bagian;?></b><br/>
-                            </div>
-                        </div>
-                    @endif
 				</div>
 			</div>
 		</div>

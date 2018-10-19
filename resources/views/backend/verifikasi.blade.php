@@ -38,7 +38,14 @@
                                 NIK <span class="required">*</span>
                             </div>
                             <div class="col-xs-12 col-sm-5">
-                                <input type="text" name="NIK" class="form-control" autofocus required>
+                                <?php
+                                    $autofocus = "autofocus";
+                                    if (isset($_GET['NIK'])){
+                                        $autofocus = "";
+                                    }
+
+                                ?>
+                                <input type="text" name="NIK" class="form-control" <?=$autofocus;?> required>
                             </div>
                             <div class="col-xs-12 col-sm-2">
                                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -56,10 +63,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <h4>Data Peserta</h4><br/>
-                                NIK : <b><?=$undian[0]->peserta->NIK;?></b><br/>
-                                No Undangan : <b><?=$undian[0]->peserta->no_undangan;?></b><br/>
-                                Nama : <b><?=$undian[0]->peserta->nama;?></b><br/>
-                                Bagian : <b><?=$undian[0]->peserta->bagian;?></b><br/>
+                                <h4>NIK : <b><?=$undian[0]->peserta->NIK;?></b></h4>
+                                <h4>Nama : <b><?=$undian[0]->peserta->nama;?></b></h4>
+                                <h4>Bagian : <b><?=$undian[0]->peserta->bagian;?></b></h4>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <h4>Status</h4><br/>
@@ -74,7 +80,7 @@
                                     <textarea class="form-control" name="keterangan" id="text-keterangan"></textarea>
                                 </div>
                                 <br/>
-                                <button type="submit" class="btn btn-block btn-info">Submit</button>
+                                <button type="submit" class="btn btn-block btn-info" autofocus>Submit</button>
                             </div>
                         </div>
                         {{ Form::close() }}

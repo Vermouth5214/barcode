@@ -64,7 +64,7 @@
                             </div>
                             <div class="profile_info">
                                 <span>Welcome,</span>
-                                <h2><?=$userinfo['firstname']." ".$userinfo['lastname']?></h2>
+                                <h2><?=$userinfo['username']?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -84,11 +84,10 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="<?=$avatar;?>" alt=""><?=$userinfo['firstname'];?>
+                                        <img src="<?=$avatar;?>" alt=""><?=$userinfo['username'];?>
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="<?=url('backend/users-user/'.$userinfo['user_id'].'/edit');?>"> Edit Profile</a></li>
                                         <li><a href="<?=url('backend/logout');?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                     </ul>
                                 </li>

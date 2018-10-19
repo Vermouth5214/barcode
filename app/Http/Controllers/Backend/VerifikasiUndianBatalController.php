@@ -14,7 +14,7 @@ use View;
 
 class VerifikasiUndianBatalController extends Controller {
 	public function index(Request $request) {
-		$hadiah = Hadiah::where('active','=',1)->orderBy('id','asc')->pluck('nama','id');
+		$hadiah = Hadiah::where('active','=',1)->orderBy('id','desc')->pluck('nama','id');
 		$id_hadiah = 0;
 		return view ('backend.verifikasi_batal',['hadiah' => $hadiah, 'id_hadiah' => $id_hadiah]);
 	}

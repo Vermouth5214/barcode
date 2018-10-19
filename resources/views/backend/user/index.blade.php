@@ -60,9 +60,7 @@
 									</span>
 								</th>
 								<th>ID</th>
-								<th>Name</th>
-								<th>Email</th>
-                                <th>Phone</th>
+								<th>Username</th>
 								<th>Level</th>
 								<th>Status</th>
 								<th>Actions</th>
@@ -92,9 +90,7 @@
 			columns: [
                 {data: 'check', name: 'check', orderable: false, searchable: false},
 				{data: 'id', name: 'id'},
-				{data: 'firstname', name: 'firstname'},
-				{data: 'email', name: 'email'},
-				{data: 'phone', name: 'phone'},
+				{data: 'username', name: 'username'},
 				{data: 'name', name: 'user_levels.name'},
 				{data:  'active', render: function ( data, type, row ) {
 					var text = "";
