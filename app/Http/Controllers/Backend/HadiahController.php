@@ -48,7 +48,8 @@ class HadiahController extends Controller
         //
 		$data = new Hadiah();
 		$data->nama = $request->nama;
-		$data->jumlah = $request->jumlah;
+        $data->jumlah = $request->jumlah;
+        $data->urutan = $request->urutan;
 		$data->user_modified = Session::get('userinfo')['user_id'];
 		if($data->save()){
 			return Redirect::to('/backend/daftar-hadiah/')->with('success', "Data saved successfully")->with('mode', 'success');
@@ -101,7 +102,8 @@ class HadiahController extends Controller
 		$data = Hadiah::find($id);
 		$userinfo = Session::get('userinfo');
 		$data->nama = $request->nama;
-		$data->jumlah = $request->jumlah;
+        $data->jumlah = $request->jumlah;
+        $data->urutan = $request->urutan;
 		$data->user_modified = Session::get('userinfo')['user_id'];
 		if($data->save()){
 			return Redirect::to('/backend/daftar-hadiah/')->with('success', "Data saved successfully")->with('mode', 'success');

@@ -30,14 +30,16 @@
 @section('content')
 	<?php
 		$nama = old('nama');
-		$jumlah = old('jumlah');
+        $jumlah = old('jumlah');
+        $urutan = old('urutan');
 		$active = 1;
 		$method = "POST";
 		$mode = "Create";
 		$url = "backend/daftar-hadiah/";
 		if (isset($data)){
 			$nama = $data[0]->nama;
-			$jumlah = $data[0]->jumlah;
+            $jumlah = $data[0]->jumlah;
+            $urutan = $data[0]->urutan;
 			$active = $data[0]->active;
 			$method = "PUT";
 			$mode = "Edit";
@@ -74,6 +76,12 @@
 							<label class="control-label col-sm-3 col-xs-12">Jumlah <span class="required">*</span></label>
 							<div class="col-sm-4 col-xs-12">
 								<input type="text" name="jumlah" required="required" class="form-control" value="<?=$jumlah;?>">
+							</div>
+                        </div>
+						<div class="form-group">
+							<label class="control-label col-sm-3 col-xs-12">Urutan <span class="required">*</span></label>
+							<div class="col-sm-4 col-xs-12">
+								<input type="text" name="urutan" required="required" class="form-control" value="<?=$urutan;?>">
 							</div>
 						</div>
 						<div class="ln_solid"></div>

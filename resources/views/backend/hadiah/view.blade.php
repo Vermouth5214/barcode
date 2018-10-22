@@ -15,6 +15,10 @@
 			<div class="form-group col-xs-12">
 				<label class="control-label">Jumlah :</label>
 				<span class="form-control"><?=$data->jumlah;?></span>
+            </div>
+			<div class="form-group col-xs-12">
+				<label class="control-label">Urutan :</label>
+				<span class="form-control"><?=$data->urutan;?></span>
 			</div>
 			<div class="form-group col-xs-12">
 				<label class="control-label">Date Created :</label>

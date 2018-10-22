@@ -36,7 +36,8 @@
 							<tr>
 								<th>ID</th>
 								<th>Nama</th>
-								<th>Jumlah</th>
+                                <th>Jumlah</th>
+                                <th>Urutan</th>
 								<th>Actions</th>
 							</tr>
 						</thead>
@@ -63,6 +64,7 @@
 				{data: 'id', name: 'id'},
 				{data: 'nama', name: 'nama'},
 				{data: 'jumlah', name: 'jumlah'},
+                {data: 'urutan', name: 'urutan'},
 				{data: 'action', name: 'action', orderable: false, searchable: false}
 			],
 			responsive: true
