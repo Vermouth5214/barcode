@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2018 at 08:23 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.1.14
+-- Generation Time: Oct 23, 2018 at 03:09 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -87,25 +87,26 @@ CREATE TABLE `hadiah` (
   `jumlah` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `user_modified` int(11) DEFAULT NULL
+  `user_modified` int(11) DEFAULT NULL,
+  `urutan` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hadiah`
 --
 
-INSERT INTO `hadiah` (`id`, `nama`, `active`, `jumlah`, `created_at`, `updated_at`, `user_modified`) VALUES
-(1, 'Sepeda Motor Yamaha', 1, 1, '2018-10-12 07:22:12', '2018-10-12 07:22:12', 2),
-(2, 'Honda Vario', 1, 10, '2018-10-12 07:22:19', '2018-10-12 07:22:19', 2),
-(3, 'TV LED', 1, 40, '2018-10-12 07:22:25', '2018-10-12 07:22:25', 2),
-(4, 'Kulkas', 1, 40, '2018-10-12 07:22:33', '2018-10-12 07:22:33', 2),
-(5, 'Paket Biochef', 1, 40, '2018-10-12 07:22:40', '2018-10-12 07:22:40', 2),
-(6, 'HP Xiaomi', 1, 40, '2018-10-12 07:22:50', '2018-10-12 07:22:50', 2),
-(7, 'Paket Moorlife', 1, 69, '2018-10-12 07:22:56', '2018-10-12 07:22:56', 2),
-(8, 'Sepeda', 1, 40, '2018-10-12 07:23:03', '2018-10-12 07:23:03', 2),
-(9, 'Kipas Angin - stand fan', 1, 40, '2018-10-12 07:23:10', '2018-10-12 07:23:10', 2),
-(10, 'Dispenser 3 kran', 1, 40, '2018-10-12 07:23:18', '2018-10-12 07:23:18', 2),
-(11, 'Rice cooker 1.8 lt', 1, 40, '2018-10-12 07:23:25', '2018-10-12 07:23:25', 2);
+INSERT INTO `hadiah` (`id`, `nama`, `active`, `jumlah`, `created_at`, `updated_at`, `user_modified`, `urutan`) VALUES
+(1, 'Sepeda Motor Yamaha', 1, 1, '2018-10-12 07:22:12', '2018-10-22 01:01:04', 2, 0),
+(2, 'Honda Vario', 1, 10, '2018-10-12 07:22:19', '2018-10-22 01:01:08', 2, 0),
+(3, 'TV LED', 1, 40, '2018-10-12 07:22:25', '2018-10-12 07:22:25', 2, 9),
+(4, 'Kulkas', 1, 40, '2018-10-12 07:22:33', '2018-10-12 07:22:33', 2, 8),
+(5, 'Paket Biochef', 1, 40, '2018-10-12 07:22:40', '2018-10-12 07:22:40', 2, 7),
+(6, 'HP Xiaomi', 1, 40, '2018-10-12 07:22:50', '2018-10-12 07:22:50', 2, 6),
+(7, 'Paket Moorlife', 1, 69, '2018-10-12 07:22:56', '2018-10-12 07:22:56', 2, 5),
+(8, 'Sepeda', 1, 40, '2018-10-12 07:23:03', '2018-10-12 07:23:03', 2, 4),
+(9, 'Kipas Angin - stand fan', 1, 40, '2018-10-12 07:23:10', '2018-10-12 07:23:10', 2, 3),
+(10, 'Dispenser 3 kran', 1, 40, '2018-10-12 07:23:18', '2018-10-22 01:01:25', 2, 2),
+(11, 'Rice cooker 1.8 lt', 1, 40, '2018-10-12 07:23:25', '2018-10-22 01:01:17', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -194,12 +195,12 @@ CREATE TABLE `peserta` (
 --
 
 INSERT INTO `peserta` (`id`, `NIK`, `no_undangan`, `nama`, `bagian`, `active`, `created_at`, `updated_at`, `user_modified`, `hadir`) VALUES
-(1, '278001', '278001', 'BAMBANG SISWANTO', 'BMS', 1, '2018-10-19 02:54:50', '2018-10-19 06:05:29', 3, 0),
-(2, '279003', '279003', 'TRESNO BUDIYANTO', 'LOGISTIC', 1, '2018-10-19 02:54:50', '2018-10-19 06:05:26', 3, 0),
-(3, '280004', '280004', 'SAMU MUKTAR', 'TIDAR', 1, '2018-10-19 02:54:50', '2018-10-19 06:05:24', 3, 0),
-(4, '284006', '284006', 'ROKHANAH', 'BME', 1, '2018-10-19 02:54:50', '2018-10-19 06:05:22', 3, 0),
-(5, '285001', '285001', 'SUSILOWATI', 'PURCHASING', 1, '2018-10-19 02:54:50', '2018-10-19 06:05:19', 3, 0),
-(6, '286001', '286001', 'CHULIYAH SETYOWATI', 'SALES PROCESS', 1, '2018-10-19 02:54:50', '2018-10-19 06:05:13', 3, 0),
+(1, '278001', '278001', 'BAMBANG SISWANTO', 'BMS', 1, '2018-10-19 02:54:50', '2018-10-19 07:34:22', 3, 0),
+(2, '279003', '279003', 'TRESNO BUDIYANTO', 'LOGISTIC', 1, '2018-10-19 02:54:50', '2018-10-19 07:34:33', 3, 0),
+(3, '280004', '280004', 'SAMU MUKTAR', 'TIDAR', 1, '2018-10-19 02:54:50', '2018-10-19 07:34:34', 3, 0),
+(4, '284006', '284006', 'ROKHANAH', 'BME', 1, '2018-10-19 02:54:50', '2018-10-19 07:34:38', 3, 0),
+(5, '285001', '285001', 'SUSILOWATI', 'PURCHASING', 1, '2018-10-19 02:54:50', '2018-10-19 07:42:05', 3, 0),
+(6, '286001', '286001', 'CHULIYAH SETYOWATI', 'SALES PROCESS', 1, '2018-10-19 02:54:50', '2018-10-19 07:43:37', 3, 0),
 (7, '286002', '286002', 'YOHANES SISWANTO', 'SEMERU', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (8, '286003', '286003', 'YOHANNES KRISTANTO', 'PPIC', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (9, '288001', '288001', 'SUPONO', 'RESIN', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
@@ -558,7 +559,7 @@ INSERT INTO `peserta` (`id`, `NIK`, `no_undangan`, `nama`, `bagian`, `active`, `
 (362, '207008', '207008', 'KRISTIAN ANDANG PUTRANTO', 'MARKETING', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (363, '208001', '208001', 'DEVYKA OKTIMA S.', 'INTERNAL AUDIT', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (364, '208002', '208002', 'ABDUL CHAMIM', 'RESIN', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
-(365, '208004', '208004', 'CHRISTIAN HANDRIONO BUDI SANTOSO', 'MARKETING', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
+(365, '208004', '208004', 'CHRISTIAN HANDRIONO', 'MARKETING', 0, '2018-10-19 02:54:50', '2018-10-23 01:03:59', 2, 0),
 (366, '299001', '299001', 'SYAIFUL HUDA', 'RESIN', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (367, '299002', '299002', 'MUKHAMMAD BASIRON', 'LOGISTIC', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (368, '299004', '299004', 'SUPARLAN', 'SECURITY', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
@@ -670,7 +671,7 @@ INSERT INTO `peserta` (`id`, `NIK`, `no_undangan`, `nama`, `bagian`, `active`, `
 (473, '217012', '217012', 'NUR ASIYAH JAMIL', 'ACCOUNTING', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (474, '217013', '217013', 'AANG FANDY PRASETYO', 'LEGAL', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (475, '217014', '217014', 'HENDRA PRADANA PUTRA', 'HRD', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
-(476, '217015', '217015', 'MARIA NICOLAS GANDEN GONDHO WINOTO', 'TEKNIK', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
+(476, '217015', '217015', 'MARIA NICOLAS GANDEN', 'TEKNIK', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (477, '217016', '217016', 'BEELINDA YAPRI', 'SMO', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (478, '217017', '217017', 'INGGRID TANESHA', 'PURCHASING', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
 (479, '217019', '217019', 'MUHAMMAD CHUNAIFI', 'QC', 1, '2018-10-19 02:54:50', '2018-10-19 02:54:50', 2, 0),
@@ -884,8 +885,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `user_level_id`, `firstname`, `lastname`, `avatar_id`, `email`, `address`, `phone`, `gender`, `birthdate`, `username`, `password`, `active`, `user_modified`, `last_activity`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Super', 'Admin', 0, 'superadmin@admin.com', 'Jl Madura xxxxxxx', '08383xxxxxxx', 'male', '1986-07-25', 'superadmin', '$2y$10$TkX/dDYrtvIEXidPOag5T.V8qbyluUHJg5ssBjKe6WlVqpItuN8uy', 1, 1, '2018-10-12 02:54:48', '2017-03-13 20:51:35', '2018-10-12 02:54:48'),
-(2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-19 04:24:21', '2017-04-19 14:29:01', '2018-10-19 04:24:21'),
-(3, 3, '-', '-', 0, 'registrator1@test1', NULL, NULL, 'male', '2018-10-09', 'registrator1', '$2y$10$o5rc7dqjjm5b6fk4Ig8oveOQguM801jRDFjN6xAjNrMQHQWX1MaQ6', 1, 1, '2018-10-19 06:04:55', '2018-10-09 04:09:31', '2018-10-19 06:04:55'),
+(2, 2, 'Admin', 'Admin', 0, 'admin@admin.com', NULL, NULL, 'male', '1983-05-25', 'admin', '$2y$10$PQaUY4b0YsSo5qAuK8Cc.OB.WeEJHrJJ0FDgk6YE9xhXboVRou3We', 1, 1, '2018-10-23 01:02:13', '2017-04-19 14:29:01', '2018-10-23 01:02:13'),
+(3, 3, '-', '-', 0, 'registrator1@test1', NULL, NULL, 'male', '2018-10-09', 'registrator1', '$2y$10$o5rc7dqjjm5b6fk4Ig8oveOQguM801jRDFjN6xAjNrMQHQWX1MaQ6', 1, 1, '2018-10-19 08:19:27', '2018-10-09 04:09:31', '2018-10-19 08:19:27'),
 (4, 3, '-', '-', 0, 'registrator2@test1', NULL, NULL, 'male', '2018-10-12', 'registrator2', '$2y$10$aMPDu6buiSYBhQSe5hok0.FuTH7kBTIAEeVevFQbkycf.038wDd6e', 1, 1, '2018-10-19 03:39:48', '2018-10-12 02:58:22', '2018-10-19 03:39:48'),
 (5, 3, '-', '-', 0, 'registrator3@test1', NULL, NULL, 'male', '2018-10-12', 'registrator3', '$2y$10$i4P5K6.nX7kUojaQiK0mtePHO64NZS20AvwMCbMkTzGudZs6c542.', 1, 1, '2018-10-19 03:39:56', '2018-10-12 02:58:43', '2018-10-19 03:39:56'),
 (6, 3, '-', '-', 0, 'registrator4@test1', NULL, NULL, 'male', '2018-10-12', 'registrator4', '$2y$10$VG1rRMVw8VB1u6TksGXsjeo7JJG7.yzLZG.zP1HVP5eLEet5qvqaS', 1, 1, '2018-10-19 03:40:07', '2018-10-12 02:59:03', '2018-10-19 03:40:07'),
@@ -895,8 +896,8 @@ INSERT INTO `users` (`id`, `user_level_id`, `firstname`, `lastname`, `avatar_id`
 (10, 3, '-', '-', 0, 'registrator8@test1', NULL, NULL, 'male', '2018-10-12', 'registrator8', '$2y$10$D4cqSr67ubF5/2x1bMae0uXDJ87CCyAo720vBTJK2r4VM5TtO7t9.', 1, 1, '2018-10-19 03:44:23', '2018-10-12 03:10:27', '2018-10-19 03:44:23'),
 (11, 3, '-', '-', 0, 'registrator9@test1', NULL, NULL, 'male', '2018-10-12', 'registrator9', '$2y$10$lVgSSVWFuKYYZpSpAMmOyuDSC03kzM3iu5qy5n2MJLSxbYyNfrCPu', 1, 1, '2018-10-19 03:44:34', '2018-10-12 03:11:50', '2018-10-19 03:44:34'),
 (12, 3, '-', '-', 0, 'registrator10@test1', NULL, NULL, 'male', '2018-10-12', 'registrator10', '$2y$10$UXdMQS1.k/NFrbsMt/EayeQAfTytsRXCm2PXHGqF9Ary.VMeIRVTq', 1, 1, '2018-10-19 03:45:10', '2018-10-12 03:12:05', '2018-10-19 03:45:10'),
-(13, 4, '-', '-', 0, 'pengundi1@test1', NULL, NULL, 'male', '2018-10-12', 'pengundi1', '$2y$10$wBBlF5QZxK8TMJKRVPtcOurQVxwbA4E9fME/PGCWDxSUlaXtE1r1O', 1, 1, '2018-10-19 04:23:15', '2018-10-12 03:15:10', '2018-10-19 04:23:15'),
-(14, 5, '-', '-', 0, 'verifikator1@test1', NULL, NULL, 'male', '2018-10-12', 'verifikator1', '$2y$10$zlY1va3RGg4IXwq83m1FfObIuo.ftRHT/pK5mKph7P9Tm2ZWzD.wi', 1, 1, '2018-10-19 04:22:39', '2018-10-12 03:15:30', '2018-10-19 04:22:39'),
+(13, 4, '-', '-', 0, 'pengundi1@test1', NULL, NULL, 'male', '2018-10-12', 'pengundi1', '$2y$10$wBBlF5QZxK8TMJKRVPtcOurQVxwbA4E9fME/PGCWDxSUlaXtE1r1O', 1, 1, '2018-10-19 06:49:17', '2018-10-12 03:15:10', '2018-10-19 06:49:17'),
+(14, 5, '-', '-', 0, 'verifikator1@test1', NULL, NULL, 'male', '2018-10-12', 'verifikator1', '$2y$10$zlY1va3RGg4IXwq83m1FfObIuo.ftRHT/pK5mKph7P9Tm2ZWzD.wi', 1, 1, '2018-10-19 06:57:27', '2018-10-12 03:15:30', '2018-10-19 06:57:27'),
 (15, 5, '-', '-', 0, 'verifikator2@test1', NULL, NULL, 'male', '2018-10-12', 'verifikator2', '$2y$10$fFawnvjrb9mo9bI3R.3EAOipq8TbW684WJ5FBs6dwKXJhZEdAZzHG', 1, 1, '2018-10-19 03:50:22', '2018-10-12 03:15:55', '2018-10-19 03:50:22'),
 (16, 5, '-', '-', 0, 'verifikator3@test1', NULL, NULL, 'male', '2018-10-12', 'verifikator3', '$2y$10$t/OnzAbFK2d7JHBEPpnenueU2Bj6DKS7Ixe4gE9WV1GhSFIUrjjQm', 1, 1, '2018-10-19 03:50:35', '2018-10-12 03:20:17', '2018-10-19 03:50:35'),
 (17, 5, '-', '-', 0, 'verifikator4@test1', NULL, NULL, 'male', '2018-10-12', 'verifikator4', '$2y$10$59UMzWeqlCaZlFKosjcS2eyN9r1rNl23yZ4yuex/UPi5pvIux4tHG', 1, 1, '2018-10-19 03:50:42', '2018-10-12 03:20:39', '2018-10-19 03:50:42'),
