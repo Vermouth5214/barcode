@@ -8,8 +8,8 @@
 		<meta name="description" content="<?=getData('web_description');?>">
 		<meta name="author" content="ODWin">
 		<title><?=getData('web_title');?> | @yield('title')</title>
-		<link rel="apple-touch-icon" href="<?=url(getData('logo'));?>">
-		<link rel="shortcut icon" href="<?=url(getData('logo'));?>">
+		<link rel="apple-touch-icon" href="<?=url('img/avian.png');?>">
+		<link rel="shortcut icon" href="<?=url('img/avian.png');?>">
 		<!-- Ladda -->
 		<link rel="stylesheet" href="<?=url('vendors/ladda/ladda.min.css');?>">
 		<!-- Bootstrap -->
