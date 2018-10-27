@@ -48,7 +48,8 @@
 			$NIK = $data[0]->NIK;
 			$nama = $data[0]->nama;
 			$bagian = $data[0]->bagian;
-			$no_undangan = $data[0]->no_undangan;			
+            $no_undangan = $data[0]->no_undangan;	
+            $undangan = $data[0]->undangan;	
 			$active = $data[0]->active;
 			$method = "PUT";
 			$mode = "Edit";
