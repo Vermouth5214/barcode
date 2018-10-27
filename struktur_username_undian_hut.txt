@@ -19,6 +19,7 @@ pengundi4
 - verikasi undian
 - verifikasi batal otomatis
 - laporan undian
+- laporan kehadiran
 ======================================
 verifikator1
 verifikator2
@@ -29,8 +30,10 @@ verifikator6
 - verifikasi undian
 - verifikasi batal otomatis
 - laporan undian
+- laporan kehadiran
 ======================================
 ketua 
 - daftar peserta
 - daftar hadiah
 - laporan undian
+- laporan kehadiran

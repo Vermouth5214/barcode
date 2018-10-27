@@ -39,6 +39,7 @@
         $nama = old('nama');
 		$bagian = old('alamat');
         $no_undangan = old('no_undangan');
+        $undangan = old('undangan');
 		$active = 1;
 		$method = "POST";
 		$mode = "Create";
@@ -110,6 +111,12 @@
 							<label class="control-label col-sm-3 col-xs-12">Bagian</label>
 							<div class="col-sm-3 col-xs-12">
 								<input type="text" name="bagian" class="form-control" value="<?=$bagian;?>">
+							</div>
+                        </div>
+						<div class="form-group">
+							<label class="control-label col-sm-3 col-xs-12">Undangan</label>
+							<div class="col-sm-3 col-xs-12">
+								<input type="text" name="undangan" class="form-control" value="<?=$undangan;?>">
 							</div>
                         </div>
 						<div class="form-group">

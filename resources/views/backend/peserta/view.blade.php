@@ -23,6 +23,10 @@
 			<div class="form-group col-xs-12">
 				<label class="control-label">Bagian :</label>
 				<span class="form-control"><?=$data->bagian;?></span>
+            </div>
+			<div class="form-group col-xs-12">
+				<label class="control-label">Undangan :</label>
+				<span class="form-control"><?=$data->undangan;?></span>
 			</div>
 			<div class="form-group col-xs-12">
 				<label class="control-label">Date Created :</label>

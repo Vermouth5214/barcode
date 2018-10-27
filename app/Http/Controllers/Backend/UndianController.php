@@ -51,6 +51,10 @@ class UndianController extends Controller {
 
 		$peserta = Peserta::where('NIK','=',$request->NIK)->where('active','=',1)->get();
 		if (count($peserta)){
+            if ($peserta[0]->undian == 0){
+                //NIK bukan peserta undian
+                return Redirect::to('/backend/daftar-undian?id_hadiah='.$request->id_hadiah)->with('success', "NIK bukan peserta undian")->with('mode', 'danger');
+            }
 			if ($peserta[0]->hadir == 1){
 				$cek_nik_undian = Undian::where('id_peserta','=',$peserta[0]->id)->count();
 				if ($cek_nik_undian == 0){

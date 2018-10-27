@@ -65,7 +65,8 @@ class PesertaController extends Controller {
 			$peserta->NIK = $request->NIK;
 			$peserta->no_undangan = $request->no_undangan;
 			$peserta->nama = $request->nama;
-			$peserta->bagian = $request->bagian;
+            $peserta->bagian = $request->bagian;
+            $peserta->undangan = $request->undangan;
 			$peserta->user_modified = Session::get('userinfo')['user_id'];
 			if($peserta->save()){
 				return Redirect::to('/backend/daftar-peserta/')->with('success', "Data saved successfully")->with('mode', 'success');
@@ -109,7 +110,8 @@ class PesertaController extends Controller {
 			$peserta->NIK = $request->NIK;
 			$peserta->no_undangan = $request->no_undangan;
 			$peserta->nama = $request->nama;
-			$peserta->bagian = $request->bagian;
+            $peserta->bagian = $request->bagian;
+            $peserta->undangan = $request->undangan;
 			$peserta->user_modified = Session::get('userinfo')['user_id'];
 			if($peserta->save()){
 				return Redirect::to('/backend/daftar-peserta/')->with('success', "Data saved successfully")->with('mode', 'success');

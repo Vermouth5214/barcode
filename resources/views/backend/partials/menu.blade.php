@@ -63,6 +63,9 @@
 			?>
 			<li class="{{ ($segment == 'laporan-undian' ? 'active' : '') }}">
 				<a href="<?=url('backend/laporan-undian');?>"><i class="fa fa-file"></i> Laporan Undian</a>
+            </li>
+			<li class="{{ ($segment == 'laporan-kehadiran' ? 'active' : '') }}">
+				<a href="<?=url('backend/laporan-kehadiran');?>"><i class="fa fa-file"></i> Laporan Kehadiran</a>
 			</li>
 			<?php
 				endif;
