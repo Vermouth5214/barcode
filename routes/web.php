@@ -127,4 +127,6 @@ Route::group(array('prefix' => 'backend','middleware'=> ['token_admin']), functi
 	Route::get('/verifikasi-undian-batal','Backend\VerifikasiUndianBatalController@index');
 	Route::post('/verifikasi-undian-batal','Backend\VerifikasiUndianBatalController@store');
 
+	Route::get('/cek-peserta','Backend\CekPesertaController@index');
+
 });

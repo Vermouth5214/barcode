@@ -27,6 +27,15 @@
 			</li>
 			<?php
 				endif;
+            ?>
+			<?php
+				if ($userinfo['user_level_id'] != 3):
+			?>
+			<li class="{{ ($segment == 'cek-peserta' ? 'active' : '') }}">
+				<a href="<?=url('backend/cek-peserta');?>"><i class="fa fa-users"></i> Cek Data Peserta</a>
+            </li>
+			<?php
+				endif;
 			?>
 			<?php
 				if (($userinfo['user_level_id'] == 1) || ($userinfo['user_level_id'] == 2) || ($userinfo['user_level_id'] == 3)):

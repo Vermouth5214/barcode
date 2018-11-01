@@ -84,7 +84,10 @@
 						<br/>
 						<div class="row">
                             <div class="col-xs-12 col-sm-2 col-sm-offset-4">
-                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                <input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit">
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-sm-offset-3">
+                                <input type="submit" class="btn btn-success btn-block" name="export" value="Export Excel">
                             </div>
 						</div>
                     </form>
