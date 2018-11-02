@@ -90,7 +90,7 @@
 						</div>
 						<br/>
 						<div class="row">
-                            <div class="col-xs-12 col-sm-2 col-sm-offset-4">
+                            <div class="col-xs-12 col-sm-2 col-sm-offset-5">
                                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
                             </div>
 						</div>
